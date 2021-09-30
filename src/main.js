@@ -1,0 +1,1 @@
+let nameArr = ['Eric L. Adams', 'Kathryn Garcia', 'Scott M. Stringer', 'Dianne Morales', 'Shaun Donovan', 'Art Chang', 'Isaac Wright Jr.','Maya D. Wiley', 'Andrew Young', 'Raymond J. Mcguire', 'Paperboy Love Prince', 'Aaron S. Foldenaur', 'Joycelyn Taylor', 'Write in Candidate'];
