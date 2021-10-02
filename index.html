@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>RCV Ballot</title>
     <script src="src/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="css.style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 </head>
@@ -14,29 +14,52 @@
 <body>
     <div class = "wrapper">
         <div class = "top">
-            
+            <p class = "stateText">Choose your <b><u>first choice</u></b> candidate</p>  <!-- "first choice" needs to be value of state -->
         </div>
 
+        <div class = "slotTitle">
+            <p>My choices:</p>
+        </div>
         <div class = "slots">
+            <button type="button" class = "editButton" id="choice1">Choice 1</button> <!-- "Choice 1" needs to be value of selected button from array -->
+            <button type="button" class = "editButton" id="choice2">Choice 2</button>
+            <button type="button" class = "editButton" id="choice3">Choice 3</button>
+            <button type="button" class = "editButton" id="choice4">Choice 4</button>
+            <button type="button" class = "editButton" id="choice5">Choice 5</button>
+            <button type="button" class = "editButton" id="choice6">Choice 6</button>
+            <button type="button" class = "editButton" id="choice7">Choice 7</button>
+            <button type="button" class = "editButton" id="choice8">Choice 8</button>
+            <button type="button" class = "editButton" id="choice9">Choice 9</button>
+            <button type="button" class = "editButton" id="choice10">Choice 10</button>
+            <button type="button" class = "editButton" id="choice11">Choice 11</button>
+            <button type="button" class = "editButton" id="choice12">Choice 12</button>
+            <button type="button" class = "editButton" id="choice13">Choice 13</button>
+            <button type="button" class = "editButton" id="choice14">Choice 14 (Potential Write-In)</button>
+
+            <button type="button" class = "submitButton" id="submit">Submit Ballet</button>
             
         </div>
 
-        <div class = "canaditeButtons">
-            <button type="button" id="canidate1">Canadite 1</button>
-            <button type="button" id="canidate2">Canadite 2</button>
-            <button type="button" id="canidate3">Canadite 3</button>
-            <button type="button" id="canidate4">Canadite 4</button>
-            <button type="button" id="canidate5">Canadite 5</button>
-            <button type="button" id="canidate6">Canadite 6</button>
-            <button type="button" id="canidate7">Canadite 7</button>
-    
-            <button type="button" id="canidate8">Canadite 8</button>
-            <button type="button" id="canidate9">Canadite 9</button>
-            <button type="button" id="canidate10">Canadite 10</button>
-            <button type="button" id="canidate11">Canadite 11</button>
-            <button type="button" id="canidate12">Canadite 12</button>
-            <button type="button" id="canidate13">Canadite 13</button>
-            <button type="button" id="canidate14">Canadite 14 (Write In)</button>
+        <div class = "candidateTitle">
+            <h1>Candidates</h1>
+        </div>
+        <div class= "candidateButtonsLeft">
+            <button type="button" class = "buttonsL" id="candidate1">Candidate 1</button> <!-- "Candidates 1" needs to be value from array -->
+            <button type="button" class = "buttonsL" id="candidate2">Candidate 2</button>
+            <button type="button" class = "buttonsL" id="candidate3">Candidate 3</button>
+            <button type="button" class = "buttonsL" id="candidate4">Candidate 4</button>
+            <button type="button" class = "buttonsL" id="candidate5">Candidate 5</button>
+            <button type="button" class = "buttonsL" id="candidate6">Candidate 6</button>
+            <button type="button" class = "buttonsL" id="candidate7">Candidate 7</button>
+        </div>
+        <div class= "candidateButtonsRight">
+            <button type="button" class = "buttonsR" id="candidate8">Candidate 8</button>
+            <button type="button" class = "buttonsR" id="candidate9">Candidate 9</button>
+            <button type="button" class = "buttonsR" id="candidate10">Candidate 10</button>
+            <button type="button" class = "buttonsR" id="candidate11">Candidate 11</button>
+            <button type="button" class = "buttonsR" id="candidate12">Candidate 12</button>
+            <button type="button" class = "buttonsR" id="candidate13">Candidate 13</button>
+            <button type="button" class = "buttonsR" id="candidate14">Candidate 14 (Write In)</button>
         </div>
 
     </div>
