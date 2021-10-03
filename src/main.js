@@ -7,14 +7,15 @@ function candidateSelection(candidate){
     {
         //confirm
         console.log("Confirmed");
+        orderedCandidate.push(candidate)
+        console.log(orderedCandidate);
     }else
     {
         //cancel
         console.log("Cancelled");
     }
     
-    orderedCandidate.push(candidate)
-    console.log(orderedCandidate);
+    
     
     return orderedCandidate;
 }
