@@ -3,20 +3,18 @@ let orderedCandidate = []
 //states for which candidate is being picked (1st choice, 2nd choice, etc)
 function candidateSelection(candidate){
     //confirm submission
-    if(confirm(`Are you sure ${candidate} your choice?`))
+    /*if(confirm(`Are you sure ${candidate} your choice?`))
     {
         //confirm
         console.log("Confirmed");
-        orderedCandidate.push(candidate)
-        console.log(orderedCandidate);
+        
     }else
     {
         //cancel
         console.log("Cancelled");
-    }
-    
-    
-    
+    }*/
+    orderedCandidate.push(candidate)
+    console.log(orderedCandidate);
     return orderedCandidate;
 }
 
