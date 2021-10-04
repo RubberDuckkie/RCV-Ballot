@@ -17,13 +17,12 @@ function candidateSelection(candidate){
     //put name in the ballot list
     for(let i=0; i<finalCandidates.length; i++)
     {
-        console.log(finalCandidates[i]);
+        //console.log(finalCandidates[i]);
         document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
     }
     
     return finalCandidates;
 }
-
 
 
 //state changes based on confirmation pop-up
@@ -37,7 +36,7 @@ function ballotSubmission(){
     {
         //confirm
         console.log("Confirmed");
-        console.log(orderedCandidate);
+        console.log(finalCandidates);
         return;
     }else
     {
@@ -47,13 +46,4 @@ function ballotSubmission(){
     
 }
 
-
 //keyboard for write-in? : keyboard button that shows keyboard image
-
-//css
-
-
-
-// let nameArr = ['Eric L. Adams', 'Kathryn Garcia', 'Scott M. Stringer', 'Dianne Morales', 'Shaun Donovan', 
-// 'Art Chang', 'Isaac Wright Jr.','Maya D. Wiley', 'Andrew Young', 'Raymond J. Mcguire', 
-// 'Paperboy Love Prince', 'Aaron S. Foldenaur', 'Joycelyn Taylor', 'Write in Candidate'];
