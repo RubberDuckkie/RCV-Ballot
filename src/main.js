@@ -11,7 +11,7 @@ function candidateSelection(candidate){
     finalCandidates = [...new Set(orderedCandidate)];
     console.log(finalCandidates);
 
-    return orderedCandidate;
+    return finalCandidate;
 }
 
 
