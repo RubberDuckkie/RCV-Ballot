@@ -1,13 +1,19 @@
 //Everything we need to do:
-let orderedCandidate = []
+let orderedCandidate = [];
+let finalCandidates = [];
 //states for which candidate is being picked (1st choice, 2nd choice, etc)
 function candidateSelection(candidate){
    
     //need to make sure there is no duplicate candidates
     orderedCandidate.push(candidate)
-    console.log(orderedCandidate);
+    //console.log(orderedCandidate);
+
+    finalCandidates = [...new Set(orderedCandidate)];
+    console.log(finalCandidates);
+
     return orderedCandidate;
 }
+
 
 //state changes based on confirmation pop-up
 //edit button (which is on the slots) brings to that specific case
