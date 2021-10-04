@@ -1,18 +1,29 @@
 //Everything we need to do:
 let orderedCandidate = [];
 let finalCandidates = [];
+let choiceNum = 1;
+
 //states for which candidate is being picked (1st choice, 2nd choice, etc)
 function candidateSelection(candidate){
    
-    //need to make sure there is no duplicate candidates
     orderedCandidate.push(candidate)
     //console.log(orderedCandidate);
 
+    //make a list w/o any duplicates
     finalCandidates = [...new Set(orderedCandidate)];
     console.log(finalCandidates);
-
-    return finalCandidate;
+    
+    
+    //put name in the ballot list
+    for(let i=0; i<finalCandidates.length; i++)
+    {
+        console.log(finalCandidates[i]);
+        document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
+    }
+    
+    return finalCandidates;
 }
+
 
 
 //state changes based on confirmation pop-up
