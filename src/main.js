@@ -2,17 +2,8 @@
 let orderedCandidate = []
 //states for which candidate is being picked (1st choice, 2nd choice, etc)
 function candidateSelection(candidate){
-    //confirm submission
-    /*if(confirm(`Are you sure ${candidate} your choice?`))
-    {
-        //confirm
-        console.log("Confirmed");
-        
-    }else
-    {
-        //cancel
-        console.log("Cancelled");
-    }*/
+   
+    //need to make sure there is no duplicate candidates
     orderedCandidate.push(candidate)
     console.log(orderedCandidate);
     return orderedCandidate;
@@ -25,10 +16,18 @@ function candidateSelection(candidate){
 //submission confirmation: ballet and each candidate choice
 
 function ballotSubmission(){
-
-    //need to make sure there is no duplicate candidates
-    console.log(orderedCandidate);
-    return
+    if(confirm(`Are you sure you want to submit your ballot?`))
+    {
+        //confirm
+        console.log("Confirmed");
+        console.log(orderedCandidate);
+        return;
+    }else
+    {
+        //cancel
+        console.log("Cancelled");
+    }
+    
 }
 
 
