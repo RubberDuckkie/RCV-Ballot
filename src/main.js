@@ -9,6 +9,12 @@ function candidateSelection(candidate){
     orderedCandidate.push(candidate)
     //console.log(orderedCandidate);
 
+    //Theres only a max of 5 for the ballot
+    if(orderedCandidate.length > 5){
+        orderedCandidate.length = Math.min(orderedCandidate.length, 5);
+    }
+    
+    
     //make a list w/o any duplicates
     finalCandidates = [...new Set(orderedCandidate)];
     console.log(finalCandidates);
@@ -20,6 +26,8 @@ function candidateSelection(candidate){
         //console.log(finalCandidates[i]);
         document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
     }
+
+
     
     return finalCandidates;
 }
@@ -32,6 +40,7 @@ function candidateSelection(candidate){
 //submission confirmation: ballet and each candidate choice
 
 function ballotSubmission(){
+   
     if(confirm(`Are you sure you want to submit your ballot?`))
     {
         //confirm
