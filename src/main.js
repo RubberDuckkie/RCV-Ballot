@@ -10,9 +10,9 @@ function candidateSelection(candidate){
     //console.log(orderedCandidate);
 
     //Theres only a max of 5 for the ballot
-    if(orderedCandidate.length > 5){
+    /*if(orderedCandidate.length > 5){
         orderedCandidate.length = Math.min(orderedCandidate.length, 5);
-    }
+    }*/
     
     
     //make a list w/o any duplicates
@@ -23,8 +23,13 @@ function candidateSelection(candidate){
     //put name in the ballot list
     for(let i=0; i<finalCandidates.length; i++)
     {
-        //console.log(finalCandidates[i]);
-        document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
+        try{
+            //console.log(finalCandidates[i]);
+            document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
+        }catch{
+            console.log("Too many candidates");
+        }
+        
     }
 
 
