@@ -32,8 +32,6 @@ function candidateSelection(candidate){
         
     }
 
-
-    
     return finalCandidates;
 }
 
@@ -43,7 +41,6 @@ function candidateSelection(candidate){
 //html buttons/ slot fills are based on the array of candidates
 
 //submission confirmation: ballet and each candidate choice
-
 function ballotSubmission(){
    
     if(confirm(`Are you sure you want to submit your ballot?`))
