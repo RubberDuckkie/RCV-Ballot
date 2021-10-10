@@ -12,20 +12,28 @@
 </head>
 
 <body>
-    <div class = "wrapper">
-        <div class = "top">
-            <p class = "stateText">Choose your <b><u>first choice</u></b> candidate</p>  <!-- "first choice" needs to be value of state -->
+    <div class="wrapper">
+        <div class="top">
+            <p class="stateText">Choose your <b><u>first choice</u></b> candidate</p>
+            <!-- "first choice" needs to be value of state -->
         </div>
 
-        <div class = "slotTitle">
+        <div class="slotTitle">
             <p>My choices:</p>
         </div>
-        <div class = "slots">
-            <button type="button" class = "editButton" id="choice1">Choice 1</button> <!-- "Choice 1" needs to be value of selected button from array -->
-            <button type="button" class = "editButton" id="choice2">Choice 2</button>
-            <button type="button" class = "editButton" id="choice3">Choice 3</button>
-            <button type="button" class = "editButton" id="choice4">Choice 4</button>
-            <button type="button" class = "editButton" id="choice5">Choice 5</button>
+        <div class="slots">
+            <button type="button" class="editButton" id="choice1">
+                Choice 1 <button type="button" class="deleteButton" id="delete"
+                    onclick="deleteButton('choice1')">X</button></button>
+            <!-- "Choice 1" needs to be value of selected button from array -->
+            <button type="button" class="editButton" id="choice2">Choice 2 <button type="button" class="deleteButton"
+                    id="delete" onclick="deleteButton('choice2')">X</button></button>
+            <button type="button" class="editButton" id="choice3">Choice 3 <button type="button" class="deleteButton"
+                    id="delete" onclick="deleteButton('choice3')">X</button></button>
+            <button type="button" class="editButton" id="choice4">Choice 4 <button type="button" class="deleteButton"
+                    id="delete" onclick="deleteButton('choice4')">X</button></button>
+            <button type="button" class="editButton" id="choice5">Choice 5 <button type="button" class="deleteButton"
+                    id="delete" onclick="deleteButton('choice5')">X</button></button>
             <!-- <button type="button" class = "editButton" id="choice6">Choice 6</button>
             <button type="button" class = "editButton" id="choice7">Choice 7</button>
             <button type="button" class = "editButton" id="choice8">Choice 8</button>
@@ -36,30 +44,44 @@
             <button type="button" class = "editButton" id="choice13">Choice 13</button>
             <button type="button" class = "editButton" id="choice14">Choice 14</button> -->
 
-            <button type="button" class = "submitButton" id="submit" onclick="ballotSubmission()">Submit Ballot</button>
-            
+            <button type="button" class="submitButton" id="submit" onclick="ballotSubmission()">Submit Ballot</button>
+
         </div>
 
-        <div class = "candidateTitle">
+        <div class="candidateTitle">
             <h1>Candidates</h1>
         </div>
-        <div class= "candidateButtonsLeft">
-            <button type="button" class = "buttonsL" id="candidate1" onclick="candidateSelection('Eric L. Adams')">Eric L. Adams</button> <!-- "Candidates 1" needs to be value from array -->
-            <button type="button" class = "buttonsL" id="candidate2" onclick="candidateSelection('Kathryn Garcia')">Kathryn Garcia</button>
-            <button type="button" class = "buttonsL" id="candidate3" onclick="candidateSelection('Scott M. Stringer')">Scott M. Stringer</button>
-            <button type="button" class = "buttonsL" id="candidate4" onclick="candidateSelection('Dianne Morales')">Dianne Morales</button>
-            <button type="button" class = "buttonsL" id="candidate5" onclick="candidateSelection('Shaun Donovan')">Shaun Donovan</button>
-            <button type="button" class = "buttonsL" id="candidate6" onclick="candidateSelection('Art Chang')">Art Chang</button>
-            <button type="button" class = "buttonsL" id="candidate7" onclick="candidateSelection('Isaac Wright Jr.')">Isaac Wright Jr.</button>
+        <div class="candidateButtonsLeft">
+            <button type="button" class="buttonsL" id="candidate1" onclick="candidateSelection('Eric L. Adams')">Eric L.
+                Adams</button> <!-- "Candidates 1" needs to be value from array -->
+            <button type="button" class="buttonsL" id="candidate2"
+                onclick="candidateSelection('Kathryn Garcia')">Kathryn Garcia</button>
+            <button type="button" class="buttonsL" id="candidate3"
+                onclick="candidateSelection('Scott M. Stringer')">Scott M. Stringer</button>
+            <button type="button" class="buttonsL" id="candidate4" onclick="candidateSelection('Dianne Morales')">Dianne
+                Morales</button>
+            <button type="button" class="buttonsL" id="candidate5" onclick="candidateSelection('Shaun Donovan')">Shaun
+                Donovan</button>
+            <button type="button" class="buttonsL" id="candidate6" onclick="candidateSelection('Art Chang')">Art
+                Chang</button>
+            <button type="button" class="buttonsL" id="candidate7"
+                onclick="candidateSelection('Isaac Wright Jr.')">Isaac Wright Jr.</button>
         </div>
-        <div class= "candidateButtonsRight">
-            <button type="button" class = "buttonsR" id="candidate8" onclick="candidateSelection('Maya D. Wiley')">Maya D. Wiley</button>
-            <button type="button" class = "buttonsR" id="candidate9" onclick="candidateSelection('Andrew Yang')">Andrew Yang</button>
-            <button type="button" class = "buttonsR" id="candidate10" onclick="candidateSelection('Raymond J. McGuire')">Raymond J. McGuire</button>
-            <button type="button" class = "buttonsR" id="candidate11" onclick="candidateSelection('Paperboy Love Prince')">Paperboy Love Prince</button>
-            <button type="button" class = "buttonsR" id="candidate12" onclick="candidateSelection('Aaron S. Foldenaur')">Aaron S. Foldenaur</button>
-            <button type="button" class = "buttonsR" id="candidate13" onclick="candidateSelection('Joycelyn Taylor')">Joycelyn Taylor</button>
-            <button type="button" class = "buttonsR" id="candidate14" onclick="candidateSelection('Write-In Candidate')">Write-In Candidate</button>
+        <div class="candidateButtonsRight">
+            <button type="button" class="buttonsR" id="candidate8" onclick="candidateSelection('Maya D. Wiley')">Maya D.
+                Wiley</button>
+            <button type="button" class="buttonsR" id="candidate9" onclick="candidateSelection('Andrew Yang')">Andrew
+                Yang</button>
+            <button type="button" class="buttonsR" id="candidate10"
+                onclick="candidateSelection('Raymond J. McGuire')">Raymond J. McGuire</button>
+            <button type="button" class="buttonsR" id="candidate11"
+                onclick="candidateSelection('Paperboy Love Prince')">Paperboy Love Prince</button>
+            <button type="button" class="buttonsR" id="candidate12"
+                onclick="candidateSelection('Aaron S. Foldenaur')">Aaron S. Foldenaur</button>
+            <button type="button" class="buttonsR" id="candidate13"
+                onclick="candidateSelection('Joycelyn Taylor')">Joycelyn Taylor</button>
+            <button type="button" class="buttonsR" id="candidate14"
+                onclick="candidateSelection('Write-In Candidate')">Write-In Candidate</button>
         </div>
 
     </div>

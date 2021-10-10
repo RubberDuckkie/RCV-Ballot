@@ -18,7 +18,6 @@ function candidateSelection(candidate){
     //make a list w/o any duplicates
     listCandidates = [...new Set(orderedCandidate)];
     
-
     //put name in the ballot list
     for(let i=0; i<listCandidates.length; i++)
     {
@@ -31,8 +30,9 @@ function candidateSelection(candidate){
         }
         
     }
-        console.log(finalCandidates);
+    console.log(finalCandidates);
     return finalCandidates;
+    
 }
 
 
@@ -57,6 +57,21 @@ function ballotSubmission(){
     
 }
 
-console.log(document.querySelector('#editButton'));
+function deleteButton(choice)
+{
+    
+    for(let i =0; i<finalCandidates.length; i++)
+    {
+        if(finalCandidates[i] == document.querySelector(`#${choice}`).innerHTML)
+        {
+            //empty the spot in array
+            finalCandidates[i] = null;
+            finalCandidates.splice(i, i+1);
+        }
+    }
+    console.log(finalCandidates);
+    return finalCandidates;
+    
+}
 
 //keyboard for write-in? : keyboard button that shows keyboard image
