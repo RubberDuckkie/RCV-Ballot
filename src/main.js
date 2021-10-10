@@ -1,5 +1,6 @@
 //Everything we need to do:
 let orderedCandidate = [];
+let listCandidates = [];
 let finalCandidates = [];
 let choiceNum = 1;
 
@@ -14,24 +15,23 @@ function candidateSelection(candidate){
         orderedCandidate.length = Math.min(orderedCandidate.length, 5);
     }*/
     
-    
     //make a list w/o any duplicates
-    finalCandidates = [...new Set(orderedCandidate)];
-    console.log(finalCandidates);
+    listCandidates = [...new Set(orderedCandidate)];
     
-    
+
     //put name in the ballot list
-    for(let i=0; i<finalCandidates.length; i++)
+    for(let i=0; i<listCandidates.length; i++)
     {
         try{
             //console.log(finalCandidates[i]);
-            document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
+            document.querySelector(`#choice${i+1}`).innerHTML = `${listCandidates[i]}`;
+            finalCandidates[i] = document.querySelector(`#choice${i+1}`).innerHTML;
         }catch{
             console.log("Too many candidates");
         }
         
     }
-
+        console.log(finalCandidates);
     return finalCandidates;
 }
 
@@ -56,5 +56,7 @@ function ballotSubmission(){
     }
     
 }
+
+console.log(document.querySelector('#editButton'));
 
 //keyboard for write-in? : keyboard button that shows keyboard image
