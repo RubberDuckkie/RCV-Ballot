@@ -48,6 +48,7 @@ function ballotSubmission() {
         //confirm
         console.log("Confirmed");
         console.log(finalCandidates);
+
         return;
     } else {
         //cancel
@@ -63,6 +64,7 @@ function deleteButton(choice) {
             //empty the spot in array
             finalCandidates[i] = null;
             finalCandidates.splice(i, i + 1);
+            document.querySelector(`#choice${i + 1}`).innerHTML = `${listCandidates[i]}`
         }
     }
     console.log(finalCandidates);
@@ -74,19 +76,19 @@ function deleteButton(choice) {
 function stateChange(finalCandidates) {
 
     if (finalCandidates[0] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>first choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>First Choice</u></b> candidate";
 
     } else if (finalCandidates[1] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>second choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Second Choice</u></b> candidate";
 
     } else if (finalCandidates[2] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>third choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Third Choice</u></b> candidate";
 
     } else if (finalCandidates[3] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>fourth choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Fourth Choice</u></b> candidate";
 
     } else if (finalCandidates[4] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>fifth choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Last Choice</u></b> candidate";
 
     } else if (finalCandidates[5] == undefined) {
         document.getElementById("stateText").innerHTML = "<b><u>Edit</u></b> your choices or <b><u>Submit</u></b> your ballot";
