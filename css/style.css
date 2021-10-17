@@ -8,14 +8,19 @@
 }
 
 
+@font-face {
+    font-family: NotoSans;
+    src: url('/css/NotoSans-Regular.ttf');
+}
+
 
 /* Top Section */
 
-/* .top {
-    background-color: #a6c6d3;
+ .top {
+    background-color: #42829d;
     grid-column: 1 / span 3;
     grid-row: 1/ span 1;
-} */
+} 
 
 .stateText {
     text-align: center;

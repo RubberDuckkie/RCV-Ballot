@@ -76,23 +76,30 @@ function deleteButton(choice) {
 function stateChange(finalCandidates) {
 
     if (finalCandidates[0] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>First Choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>First Choice</u></b>";
 
     } else if (finalCandidates[1] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>Second Choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Second Choice</u></b>";
 
     } else if (finalCandidates[2] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>Third Choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Third Choice</u></b>";
 
     } else if (finalCandidates[3] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>Fourth Choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Fourth Choice</u></b>";
 
     } else if (finalCandidates[4] == undefined) {
-        document.getElementById("stateText").innerHTML = "Choose your <b><u>Last Choice</u></b> candidate";
+        document.getElementById("stateText").innerHTML = "Choose your <b><u>Last Choice</u></b>";
 
     } else if (finalCandidates[5] == undefined) {
         document.getElementById("stateText").innerHTML = "<b><u>Edit</u></b> your choices or <b><u>Submit</u></b> your ballot";
     }
+}
+function mainPage(){
+    window.open('/index.html')
+}
+
+function finalList(){
+    document.getElementById('finalList').innerHTML = finalCandidates;
 }
 
 //keyboard for write-in? : keyboard button that shows keyboard image
