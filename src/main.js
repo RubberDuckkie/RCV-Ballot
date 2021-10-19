@@ -32,11 +32,12 @@ function addNameToBallot()
 
         } catch {
             console.log("Too many candidates");
+            finalCandidates.length = 5;
         }
 
         }
         stateChange(listCandidates);
-        console.log(finalCandidates);
+        //console.log(finalCandidates);
         return finalCandidates;
     }
 
@@ -62,18 +63,42 @@ function ballotSubmission() {
 
 function deleteButton(choice) {
 
+   
     for (let i = 0; i < finalCandidates.length; i++) {
         if (finalCandidates[i] == document.querySelector(`#${choice}`).innerHTML) {
             //empty the spot in array
-            finalCandidates[i] = null;
-            finalCandidates.splice(i, i + 1);
+            finalCandidates[i] = "null";
+            //push up other choices
+            moveUpBallots();
+
             document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
-            document.querySelector(`#choice${i + 2}`).innerHTML = `choice ${i+2}`;
+            document.querySelector(`#choice${i + 2}`).innerHTML = `Choice ${i+2}`;
         }
     }
+    
+
     console.log(finalCandidates);
     return finalCandidates;
 
+}
+function moveUpBallots()
+{
+    for(let i=0; i<finalCandidates.length; i++)
+    {
+        finalCandidates.splice(i,1, finalCandidates[i]);
+    }
+
+    //make the final list equal the new list (no null elements)
+    let newCandidates = [];
+    finalCandidates.forEach(elem=>{
+        if(elem != "null")
+        {
+            newCandidates.push(elem);
+        }
+        
+    });
+    finalCandidates = newCandidates;
+    return finalCandidates;
 }
 
 
