@@ -77,7 +77,6 @@ function deleteButton(choice) {
     
     displayBallotAfterDelete();
     orderedCandidate = listCandidates;
-    //console.log(listCandidates);
     return listCandidates;
 
 }//end delete button
@@ -96,6 +95,9 @@ function displayBallotAfterDelete()
         }
         
     }
+
+    //set the new final list
+    finalCandidates = listCandidates;
     return listCandidates;
 }
 function moveUpBallots()
