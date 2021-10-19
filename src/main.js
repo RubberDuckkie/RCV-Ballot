@@ -2,7 +2,8 @@
 //edit button
 //css (colors and buttons)
 //change pages
-//language change button (spanish and english)
+//language change button and help button - ok to not be functional
+//keyboard image
 
 
 let orderedCandidate = [];
