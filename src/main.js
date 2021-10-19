@@ -8,15 +8,20 @@ let choiceNum = 1;
 function candidateSelection(candidate) {
 
     orderedCandidate.push(candidate)
+    //make a list w/o any duplicates
+    listCandidates = [...new Set(orderedCandidate)];
     //console.log(orderedCandidate);
 
     //Theres only a max of 5 for the ballot
     /*if(orderedCandidate.length > 5){
         orderedCandidate.length = Math.min(orderedCandidate.length, 5);
     }*/
+    addNameToBallot();
 
-    //make a list w/o any duplicates
-    listCandidates = [...new Set(orderedCandidate)];
+}
+
+function addNameToBallot()
+{
 
     //put name in the ballot list
     for (let i = 0; i < listCandidates.length; i++) {
@@ -29,13 +34,11 @@ function candidateSelection(candidate) {
             console.log("Too many candidates");
         }
 
+        }
+        stateChange(listCandidates);
+        console.log(finalCandidates);
+        return finalCandidates;
     }
-    stateChange(listCandidates);
-    console.log(finalCandidates);
-    return finalCandidates;
-
-}
-
 
 //state changes based on confirmation pop-up
 //edit button (which is on the slots) brings to that specific case
@@ -64,7 +67,8 @@ function deleteButton(choice) {
             //empty the spot in array
             finalCandidates[i] = null;
             finalCandidates.splice(i, i + 1);
-            document.querySelector(`#choice${i + 1}`).innerHTML = `${listCandidates[i]}`
+            document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
+            document.querySelector(`#choice${i + 2}`).innerHTML = `choice ${i+2}`;
         }
     }
     console.log(finalCandidates);
