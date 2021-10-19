@@ -32,12 +32,13 @@ function addNameToBallot()
 
         } catch {
             console.log("Too many candidates");
+            listCandidates,length = 5;
             finalCandidates.length = 5;
         }
 
         }
         stateChange(listCandidates);
-        //console.log(finalCandidates);
+        console.log(finalCandidates);
         return finalCandidates;
     }
 
@@ -63,11 +64,11 @@ function ballotSubmission() {
 
 function deleteButton(choice) {
 
-   orderedCandidates = finalCandidates;
+    
     for (let i = 0; i < finalCandidates.length; i++) {
         if (finalCandidates[i] == document.querySelector(`#${choice}`).innerHTML) {
             //empty the spot in array
-            orderedCandidates[i] = "null";
+            listCandidates[i] = "null";
             //push up other choices
             moveUpBallots();
 
@@ -75,41 +76,46 @@ function deleteButton(choice) {
     }
     
     displayBallotAfterDelete();
-    
-    console.log(orderedCandidates);
-    return orderedCandidates;
+    orderedCandidate = listCandidates;
+    //console.log(listCandidates);
+    return listCandidates;
 
 }//end delete button
 
 function displayBallotAfterDelete()
 {
-    for(let i=0; i<=5; i++)
+    for(let i=0; i<5; i++)
     {
         try{
-            document.querySelector(`#choice${i+1}`).innerHTML = `${orderedCandidates[i]}`;
-        }catch{}
+            document.querySelector(`#choice${i+1}`).innerHTML = `${listCandidates[i]}`;
+            
+            
+        }
+        catch{
+            document.querySelector(`#choice${i+1}`).innerHTML = `Choice ${i+ 1}`;
+        }
         
     }
-    return orderedCandidates;
+    return listCandidates;
 }
 function moveUpBallots()
 {
-    for(let i=0; i<orderedCandidates.length; i++)
+    for(let i=0; i<listCandidates.length; i++)
     {
-        orderedCandidates.splice(i,1, orderedCandidates[i]);
+        listCandidates.splice(i,1, listCandidates[i]);
     }
 
     //make the final list equal the new list (no null elements)
     let newCandidates = [];
-    orderedCandidates.forEach(elem=>{
+    listCandidates.forEach(elem=>{
         if(elem != "null")
         {
             newCandidates.push(elem);
         }
         
     });
-    orderedCandidates = newCandidates;
-    return orderedCandidates;
+    listCandidates = newCandidates;
+    return listCandidates;
 }
 
 
