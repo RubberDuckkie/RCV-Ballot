@@ -63,42 +63,53 @@ function ballotSubmission() {
 
 function deleteButton(choice) {
 
-   
+   orderedCandidates = finalCandidates;
     for (let i = 0; i < finalCandidates.length; i++) {
         if (finalCandidates[i] == document.querySelector(`#${choice}`).innerHTML) {
             //empty the spot in array
-            finalCandidates[i] = "null";
+            orderedCandidates[i] = "null";
             //push up other choices
             moveUpBallots();
 
-            document.querySelector(`#choice${i+1}`).innerHTML = `${finalCandidates[i]}`;
-            document.querySelector(`#choice${i + 2}`).innerHTML = `Choice ${i+2}`;
         }
     }
     
+    displayBallotAfterDelete();
+    
+    console.log(orderedCandidates);
+    return orderedCandidates;
 
-    console.log(finalCandidates);
-    return finalCandidates;
+}//end delete button
 
+function displayBallotAfterDelete()
+{
+    for(let i=0; i<=5; i++)
+    {
+        try{
+            document.querySelector(`#choice${i+1}`).innerHTML = `${orderedCandidates[i]}`;
+        }catch{}
+        
+    }
+    return orderedCandidates;
 }
 function moveUpBallots()
 {
-    for(let i=0; i<finalCandidates.length; i++)
+    for(let i=0; i<orderedCandidates.length; i++)
     {
-        finalCandidates.splice(i,1, finalCandidates[i]);
+        orderedCandidates.splice(i,1, orderedCandidates[i]);
     }
 
     //make the final list equal the new list (no null elements)
     let newCandidates = [];
-    finalCandidates.forEach(elem=>{
+    orderedCandidates.forEach(elem=>{
         if(elem != "null")
         {
             newCandidates.push(elem);
         }
         
     });
-    finalCandidates = newCandidates;
-    return finalCandidates;
+    orderedCandidates = newCandidates;
+    return orderedCandidates;
 }
 
 
