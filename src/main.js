@@ -86,12 +86,21 @@ function displayBallotAfterDelete()
     for(let i=0; i<5; i++)
     {
         try{
-            document.querySelector(`#choice${i+1}`).innerHTML = `${listCandidates[i]}`;
+            //display the candidate on the ballot
+            if(listCandidates[i] == undefined )
+            {
+                //display the choice number 
+                document.querySelector(`#choice${i+1}`).innerHTML = `Choice ${i+ 1}`;
+            }else
+            {
+                //display the candidate
+                document.querySelector(`#choice${i+1}`).innerHTML = `${listCandidates[i]}`;
             
+            }
             
         }
         catch{
-            document.querySelector(`#choice${i+1}`).innerHTML = `Choice ${i+ 1}`;
+            
         }
         
     }
@@ -99,7 +108,9 @@ function displayBallotAfterDelete()
     //set the new final list
     finalCandidates = listCandidates;
     return listCandidates;
-}
+
+}//end display after delete
+
 function moveUpBallots()
 {
     for(let i=0; i<listCandidates.length; i++)
