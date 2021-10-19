@@ -1,10 +1,14 @@
-//Everything we need to do:
+//still need to do:
+//edit button
+//css (colors and buttons)
+
+
 let orderedCandidate = [];
 let listCandidates = [];
 let finalCandidates = [];
 let choiceNum = 1;
 
-//states for which candidate is being picked (1st choice, 2nd choice, etc)
+
 function candidateSelection(candidate) {
 
     orderedCandidate.push(candidate)
@@ -42,10 +46,6 @@ function addNameToBallot()
         return finalCandidates;
     }
 
-//state changes based on confirmation pop-up
-//edit button (which is on the slots) brings to that specific case
-//html buttons/ slot fills are based on the array of candidates
-
 //submission confirmation: ballet and each candidate choice
 function ballotSubmission() {
 
@@ -77,6 +77,7 @@ function deleteButton(choice) {
     
     displayBallotAfterDelete();
     orderedCandidate = listCandidates;
+    stateChange(listCandidates);
     return listCandidates;
 
 }//end delete button
@@ -132,6 +133,7 @@ function moveUpBallots()
 }
 
 
+//change the "choose your {$candidate number}"
 function stateChange(finalCandidates) {
 
     if (finalCandidates[0] == undefined) {
