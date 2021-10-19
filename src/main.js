@@ -1,6 +1,9 @@
 //still need to do:
 //edit button
 //css (colors and buttons)
+//change pages
+//import font
+//language change button (spanish and english)
 
 
 let orderedCandidate = [];
