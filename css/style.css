@@ -8,19 +8,25 @@
 }
 
 
+
 @font-face {
     font-family: NotoSans;
     src: url('/css/NotoSans-Regular.ttf');
 }
 
+body{
+    font-family: NotoSans;
+}
+
+
 
 /* Top Section */
-
+/* 
  .top {
     background-color: #42829d;
     grid-column: 1 / span 3;
     grid-row: 1/ span 1;
-} 
+}  */
 
 .stateText {
     text-align: center;
@@ -31,7 +37,8 @@
 /* Candidate Slots */
 
 .slotTitle {
-    background-color: #42829d;
+    background: rgb(0,58,113);
+    background: linear-gradient(159deg, rgba(0,58,113,1) 55%, rgba(66,130,157,1) 90%);
     grid-column: 1/ span 1;
     grid-row: 2/ span 1;
 
@@ -44,7 +51,8 @@
 }
 
 .slots {
-    background-color: #42829d;
+    background: rgb(0,58,113);
+    background: linear-gradient(159deg, rgba(0,58,113,1) 0%, rgba(66,130,157,1) 90%, rgba(112,160,194,1) 100%);
     grid-column: 1/ span 1;
     grid-row: 3/ span 2;
 
@@ -70,18 +78,17 @@
 }
 
 .submitButton {
-    float: left;
-    clear: left;
+    
 
-    margin: 60px 150px 30px 150px;
+    margin: 30px 150px 40px 290px;
 
-    background-color: #a6c6d3;
+    background-color: #ECAB3C;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 40px;
     border: none;
 
     font-size: 32px;
-    color: black;
+    color: white;
     padding-left: 20px;
     
 }
@@ -103,11 +110,13 @@
 }
 
 .candidateButtonsLeft {
+    width: 500px;
     grid-column: 2 /span 1;
     grid-row: 3/ span 2;
 }
 
 .candidateButtonsRight {
+    width: 500px;
     grid-column: 3 /span 1;
     grid-row: 3/ span 2;
 }
@@ -115,7 +124,7 @@
 .candidateButtonsLeft, .candidateButtonsRight {
     background-color: white;
     display: inline-block;
-    padding-top: 30px;
+    
 }
 
 .buttonsL {
@@ -137,7 +146,7 @@
     padding: 10px 20px;
     border-radius: 18px;
     border: none;
-
+    font-family: NotoSans;
     font-size: 26px;
     color: white;
 }
