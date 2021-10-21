@@ -1,31 +1,27 @@
 /* Basic CSS */
 
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .2fr .1fr 1fr 1fr;
-    border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.1fr 1fr 1fr;
+  border: 2px solid black;
 }
-
-
 
 @font-face {
-    font-family: NotoSans;
-    src: url('css/NotoSans-Regular.ttf');
+  font-family: NotoSans;
+  src: url("css/NotoSans-Regular.ttf");
 }
 
-body{
-    font-family: NotoSans;
+body {
+  font-family: NotoSans;
 }
 
-h1{
-    font-family: NotoSans;
+h1 {
+  font-family: NotoSans;
 }
-p{
-    font-family: NotoSans;
+p {
+  font-family: NotoSans;
 }
-
-
 
 /* Top Section */
 /* 
@@ -36,221 +32,233 @@ p{
 }  */
 
 .stateText {
-    text-align: center;
-    font-size: 24px;
-    color: white;
+  text-align: center;
+  font-size: 24px;
+  color: white;
 }
 
 /* Candidate Slots */
 
 .slotTitle {
-    background: rgb(0,58,113);
-    background: linear-gradient(159deg, rgba(0,58,113,1) 80%,  rgb(66,130,157,1) 100%);
-    grid-column: 1/ span 1;
-    grid-row: 2/ span 1;
+  background: rgb(0, 58, 113);
+  background: linear-gradient(
+    159deg,
+    rgba(0, 58, 113, 1) 80%,
+    rgb(66, 130, 157, 1) 100%
+  );
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 
-    padding-top: 15px;
-    padding-left: 60px;
+  padding-top: 15px;
+  padding-left: 60px;
 
-    color: white;
-    font-size: 20px;
-    
+  color: white;
+  font-size: 20px;
 }
 
 .slots {
-    background: rgb(0,58,113);
-    background: linear-gradient(159deg, rgba(0,58,113,1) 1%, rgba(66,130,157,1) 90%, rgba(112,160,194,1) 100%);
-    grid-column: 1/ span 1;
-    grid-row: 3/ span 2;
+  background: rgb(0, 58, 113);
+  background: linear-gradient(
+    159deg,
+    rgba(0, 58, 113, 1) 1%,
+    rgba(66, 130, 157, 1) 90%,
+    rgba(112, 160, 194, 1) 100%
+  );
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 2;
 
-    display: inline-block;
+  display: inline-block;
 
-    padding-top: 30px;
-    border-radius:0px 0px 50px 0px ;
+  padding-top: 30px;
+  border-radius: 0px 0px 50px 0px;
 }
 
 .editButton {
-    float: left;
-    clear: left;
+  float: left;
+  clear: left;
 
-    margin: 2px 150px 2px 150px;
+  margin: 2px 150px 2px 150px;
 
-    background-color: #a6c6d3;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: none;
-    width: 500px;
-    font-size: 28px;
-    color: black;
+  background-color: #a6c6d3;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  width: 500px;
+  font-size: 28px;
+  color: black;
 }
 
 .submitButton {
-    
+  margin: 30px 150px 40px 290px;
 
-    margin: 30px 150px 40px 290px;
+  background-color: #ecab3c;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: none;
 
-    background-color: #ECAB3C;
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: none;
-
-    font-size: 32px;
-    color: white;
-    padding-left: 20px;
-    
+  font-size: 32px;
+  color: white;
+  padding-left: 20px;
 }
 
 /* Candidate Buttons */
 
 .candidateTitle {
-    background-color: white;
-    grid-column: 2/ span 2;
-    grid-row: 2/ span 1;
+  background-color: white;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
 
-    padding-top: 15px;
-    padding-left: 60px;
+  padding-top: 15px;
+  padding-left: 60px;
 
-    color: black;
-    font-size: 20px;
-    
-    border-radius:50px 0px 0px 0px ;
+  color: black;
+  font-size: 20px;
+
+  border-radius: 50px 0px 0px 0px;
 }
 
 .candidateButtonsLeft {
-    width: 500px;
-    grid-column: 2 /span 1;
-    grid-row: 3/ span 2;
+  width: 500px;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 2;
 }
 
 .candidateButtonsRight {
-    width: 500px;
-    grid-column: 3 /span 1;
-    grid-row: 3/ span 2;
+  width: 500px;
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 2;
 }
 
-.candidateButtonsLeft, .candidateButtonsRight {
-    background-color: white;
-    display: inline-block;
-    
+.candidateButtonsLeft,
+.candidateButtonsRight {
+  background-color: white;
+  display: inline-block;
 }
 
 .buttonsL {
-    float: left;
-    clear: left;
+  float: left;
+  clear: left;
 
-    margin: 12px 20px 12px 150px;
+  margin: 12px 20px 12px 150px;
 }
 
 .buttonsR {
-    float: left;
-    clear: left;
+  float: left;
+  clear: left;
 
-    margin: 12px 150px 12px 20px;
+  margin: 12px 150px 12px 20px;
 }
 
-.buttonsL, .buttonsR {
-    background-color: #42829d;
-    padding: 10px 20px;
-    border-radius: 18px;
-    border: none;
-    font-family: NotoSans;
-    font-size: 26px;
-    color: white;
+.buttonsL,
+.buttonsR {
+  background-color: #42829d;
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: none;
+  font-family: NotoSans;
+  font-size: 26px;
+  color: white;
 }
 
- /* The Modal For Keyboard */
+/* The Modal For Keyboard */
 /* Style the Image Used to Trigger the Modal */
 #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
   }
-  
-  #myImg:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  to {
+    transform: scale(1);
   }
-  
-  /* Modal Content (Image) */
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
   .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 100%;
   }
-  
-  /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-  }
+}
 
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
 
-  .container {
-    height: 200px;
-    position: relative;
-    border: 3px solid green;
-  }
-  
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

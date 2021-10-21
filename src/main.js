@@ -39,11 +39,7 @@ function addNameToBallot() {
     stateChange(listCandidates);
     console.log(finalCandidates);
     return finalCandidates;
-}
-
-//state changes based on confirmation pop-up
-//edit button (which is on the slots) brings to that specific case
-//html buttons/ slot fills are based on the array of candidates
+}//end add name to ballot
 
 //submission confirmation: ballet and each candidate choice
 function ballotSubmission() {
@@ -52,14 +48,14 @@ function ballotSubmission() {
         //confirm
         console.log("Confirmed");
         console.log(finalCandidates);
-        window.location.href = "/mo1439/RCV/RCV-Ballot/confirmation.html";
+        window.location.href = "./confirmation.html";
         return;
     } else {
         //cancel
         console.log("Cancelled");
     }
 
-}
+}//ballot submission end
 
 function deleteButton(choice) {
 
@@ -121,7 +117,8 @@ function moveUpBallots() {
     });
     listCandidates = newCandidates;
     return listCandidates;
-}
+
+}//end move up ballots
 
 function keyboard(src, width, height, alt) {
     let img = document.createElement("img");
@@ -171,11 +168,10 @@ function finalList() {
 }
 
 function finalConfirmation(){
-    window.location.href="/mo1439/RCV/RCV-Ballot/outcome.html";
+    window.location.href="./outcome.html";
 }
 
 function revisionConfirmation(){
-    window.location.href="/mo1439/RCV/RCV-Ballot/index.html";
+    window.location.href="./index.html";
 }
 
-//keyboard for write-in? : keyboard button that shows keyboard image
