@@ -4,7 +4,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 0.1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
   border: 2px solid black;
 }
 
@@ -65,7 +65,7 @@ ol li {
     rgb(66, 130, 157, 1) 100%
   );
   grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
 
   padding-top: 15px;
   padding-left: 60px;
@@ -83,7 +83,7 @@ ol li {
     rgba(112, 160, 194, 1) 100%
   );
   grid-column: 1 / span 1;
-  grid-row: 3 / span 2;
+  grid-row: 2 / span 2;
 
   display: inline-block;
 
@@ -124,7 +124,7 @@ ol li {
 .candidateTitle {
   background-color: white;
   grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
 
   padding-top: 15px;
   padding-left: 60px;
@@ -138,13 +138,13 @@ ol li {
 .candidateButtonsLeft {
   width: 500px;
   grid-column: 2 / span 1;
-  grid-row: 3 / span 2;
+  grid-row: 2 / span 2;
 }
 
 .candidateButtonsRight {
   width: 500px;
   grid-column: 3 / span 1;
-  grid-row: 3 / span 2;
+  grid-row: 2 / span 2;
 }
 
 .candidateButtonsLeft,
