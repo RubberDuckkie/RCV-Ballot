@@ -128,6 +128,14 @@ function moveUpBallots() {
 
 }//end move up ballots
 
+//clear the ballot
+function clearBallot()
+{
+    finalCandidates.length = 0;
+    deleteButton('choice1');
+    return finalCandidates;
+}
+
 function keyboard(src, width, height, alt) {
     let img = document.createElement("img");
     img.src = src;
