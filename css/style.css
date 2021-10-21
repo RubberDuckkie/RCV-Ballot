@@ -141,14 +141,41 @@ ol li {
   grid-row: 2 / span 2;
 }
 
-.x-buttons {
+.button1 {
   position: absolute;
-  width: 26px;
-  height: 50px;
-  left: 170px;
-  top: 220px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  left: 165px;
+  top: 225px;
 }
-
+.button2 {
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 30px;
+  left: 165px;
+  top: 280px;
+}
+.button3 {
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 30px;
+  left: 165px;
+  top: 335px;
+}
+.button4 {
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 30px;
+  left: 165px;
+  top: 393px;
+}
+.button5 {
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 30px;
+  left: 165px;
+  top: 450px;
+}
 .candidateButtonsRight {
   width: 500px;
   grid-column: 3 / span 1;
