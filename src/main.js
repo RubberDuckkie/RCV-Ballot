@@ -4,6 +4,13 @@ let listCandidates = [];
 let finalCandidates = [];
 let choiceNum = 1;
 
+//save list into local storage
+function saveFinalCandidates()
+{
+    localStorage.setItem('candidates', finalCandidates);
+}
+
+
 //states for which candidate is being picked (1st choice, 2nd choice, etc)
 function candidateSelection(candidate) {
 
@@ -38,6 +45,7 @@ function addNameToBallot() {
     }
     stateChange(listCandidates);
     console.log(finalCandidates);
+    saveFinalCandidates();
     return finalCandidates;
 }//end add name to ballot
 
@@ -175,12 +183,13 @@ function mainPage() {
 }
 
 function finalList() {
-    console.log(finalCandidates);
-    let finalists = document.getElementById('.finalList');
-    finalCandidates.forEach((item)=>{
-        let li = document.createElement('li');
-        li.innerText = item;
-        finalists.appendChild(li); 
+
+    let myBallot = localStorage['candidates'].split(',');
+    //console.log("FINAL");
+    console.log(myBallot);
+
+    myBallot.forEach((item)=>{
+        document.querySelector('#finalList').innerHTML += `<li>${item}</li>`;
     });
 }
 
