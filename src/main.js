@@ -20,8 +20,7 @@ function candidateSelection(candidate) {
 
 }
 
-function addNameToBallot()
-{
+function addNameToBallot() {
 
     //put name in the ballot list
     for (let i = 0; i < listCandidates.length; i++) {
@@ -32,15 +31,15 @@ function addNameToBallot()
 
         } catch {
             console.log("Too many candidates");
-            listCandidates,length = 5;
+            listCandidates, length = 5;
             finalCandidates.length = 5;
         }
 
-        }
-        stateChange(listCandidates);
-        console.log(finalCandidates);
-        return finalCandidates;
     }
+    stateChange(listCandidates);
+    console.log(finalCandidates);
+    return finalCandidates;
+}
 
 //state changes based on confirmation pop-up
 //edit button (which is on the slots) brings to that specific case
@@ -53,7 +52,7 @@ function ballotSubmission() {
         //confirm
         console.log("Confirmed");
         console.log(finalCandidates);
-
+        window.location.href = "/mo1439/RCV/RCV-Ballot/confirmation.html";
         return;
     } else {
         //cancel
@@ -64,7 +63,7 @@ function ballotSubmission() {
 
 function deleteButton(choice) {
 
-    
+
     for (let i = 0; i < finalCandidates.length; i++) {
         if (finalCandidates[i] == document.querySelector(`#${choice}`).innerHTML) {
             //empty the spot in array
@@ -74,35 +73,31 @@ function deleteButton(choice) {
 
         }
     }
-    
+
     displayBallotAfterDelete();
     orderedCandidate = listCandidates;
     return listCandidates;
 
 }//end delete button
 
-function displayBallotAfterDelete()
-{
-    for(let i=0; i<5; i++)
-    {
-        try{
+function displayBallotAfterDelete() {
+    for (let i = 0; i < 5; i++) {
+        try {
             //display the candidate on the ballot
-            if(listCandidates[i] == undefined )
-            {
+            if (listCandidates[i] == undefined) {
                 //display the choice number 
-                document.querySelector(`#choice${i+1}`).innerHTML = `Choice ${i+ 1}`;
-            }else
-            {
+                document.querySelector(`#choice${i + 1}`).innerHTML = `Choice ${i + 1}`;
+            } else {
                 //display the candidate
-                document.querySelector(`#choice${i+1}`).innerHTML = `${listCandidates[i]}`;
-            
+                document.querySelector(`#choice${i + 1}`).innerHTML = `${listCandidates[i]}`;
+
             }
-            
+
         }
-        catch{
-            
+        catch {
+
         }
-        
+
     }
 
     //set the new final list
@@ -111,25 +106,34 @@ function displayBallotAfterDelete()
 
 }//end display after delete
 
-function moveUpBallots()
-{
-    for(let i=0; i<listCandidates.length; i++)
-    {
-        listCandidates.splice(i,1, listCandidates[i]);
+function moveUpBallots() {
+    for (let i = 0; i < listCandidates.length; i++) {
+        listCandidates.splice(i, 1, listCandidates[i]);
     }
 
     //make the final list equal the new list (no null elements)
     let newCandidates = [];
-    listCandidates.forEach(elem=>{
-        if(elem != "null")
-        {
+    listCandidates.forEach(elem => {
+        if (elem != "null") {
             newCandidates.push(elem);
         }
-        
+
     });
     listCandidates = newCandidates;
     return listCandidates;
 }
+
+function keyboard(src, width, height, alt) {
+    let img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);
+}
+
 
 
 function stateChange(finalCandidates) {
@@ -153,12 +157,25 @@ function stateChange(finalCandidates) {
         document.getElementById("stateText").innerHTML = "<b><u>Edit</u></b> your choices or <b><u>Submit</u></b> your ballot";
     }
 }
-function mainPage(){
+function mainPage() {
     window.open('/index.html')
 }
 
-function finalList(){
-    document.getElementById('finalList').innerHTML = finalCandidates;
+function finalList() {
+    let finalists = document.getElementById('finalList');
+    finalCandidates.forEach((item)=>{
+        let li = document.createElement('li');
+        li.innerText = item;
+        finalists.appendChild(li); 
+    })
+}
+
+function finalConfirmation(){
+    window.location.href="/mo1439/RCV/RCV-Ballot/outcome.html";
+}
+
+function revisionConfirmation(){
+    window.location.href="/mo1439/RCV/RCV-Ballot/index.html";
 }
 
 //keyboard for write-in? : keyboard button that shows keyboard image
