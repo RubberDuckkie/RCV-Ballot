@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmation</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="src/main.js"></script>
-    
+
 </head>
+
 <body style="background-color: #42829D;">
-    <h1 style="color: aliceblue; text-align:center; font-family: NotoSans;"><b>Is this your final selection?</b></h1>
-   
-    <div id="finalListBox">
-        <ul id="finalList" style="font-family: NotoSans; color: aliceblue; text-align:center; font-size: 50px;">
-            <li>Eric L. Adams</li>
-            <li>Kathryn Garcia</li>
-            <li>Scott M. Stringer</li>
-            <li>Dianne Morales</li>
-            <li>Shaun Donovan</li>
-        </ul>
-    </div>
-    
-        <div class="center">
-            <button style="
+    <h1 style="color: aliceblue; text-align:center; font-family: 'Noto Sans', sans-serif; font-size: 5rem"><b>Is this
+            your final
+            selection?</b></h1>
+
+    <button id="show-list" onclick="finalList()">Show List</button>
+    <ol id="finalList">
+        <li>Eric L. Adams</li>
+        <li>Kathryn Garcia</li>
+        <li>Scott M. Stringer</li>
+        <li>Dianne Morales</li>
+        <li>Shaun Donovan</li>
+    </ol>
+
+
+    <div class="center">
+        <button style="
            
             background-color: #17495F;
             padding: 10px 20px;
@@ -32,9 +36,8 @@
         
             font-size: 32px;
             color: white;
-            padding-left: 20px;"
-            onclick="revisionConfirmation()">Back</button>
-            <button style="
+            padding-left: 20px;" onclick="revisionConfirmation()">Back</button>
+        <button style="
            
             background-color: #ECAB3C;
             padding: 10px 20px;
@@ -44,8 +47,9 @@
             font-size: 32px;
             color: white;
             padding-left: 20px;" onclick="finalConfirmation()">Submit</button>
-        </div>
-   
-    
+    </div>
+
+
 </body>
+
 </html>

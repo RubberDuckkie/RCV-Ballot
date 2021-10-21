@@ -83,10 +83,11 @@ function displayBallotAfterDelete() {
             if (listCandidates[i] == undefined) {
                 //display the choice number 
                 document.querySelector(`#choice${i + 1}`).innerHTML = `Choice ${i + 1}`;
+                document.querySelector(`#choice${i + 1}`).style.font = `Noto Sans`;
             } else {
                 //display the candidate
                 document.querySelector(`#choice${i + 1}`).innerHTML = `${listCandidates[i]}`;
-
+                document.querySelector(`#choice${i + 1}`).style.font = `Noto Sans`;
             }
 
         }
@@ -159,13 +160,14 @@ function mainPage() {
 }
 
 function finalList() {
-    let finalists = document.getElementById('finalList');
+    console.log(finalCandidates);
+    let finalists = document.getElementById('.finalList');
     finalCandidates.forEach((item)=>{
         let li = document.createElement('li');
         li.innerText = item;
         finalists.appendChild(li); 
     })
-}
+}//end final list
 
 function finalConfirmation(){
     window.location.href="./outcome.html";
