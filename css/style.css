@@ -98,7 +98,7 @@ ol li {
   margin: 2px 150px 2px 150px;
 
   background-color: #a6c6d3;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 8px;
   border: none;
   width: 500px;
@@ -106,14 +106,28 @@ ol li {
   color: black;
 }
 
-.submitButton {
-  margin: 30px 150px 40px 290px;
+.clear-button {
+  margin-top: 50px;
+  margin-left: 175px;
+  margin-right: 50px;
+  grid-row: 1 / span 1;
+  color: black;
+  background-color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: none;
+  font-size: 25px;
 
+  font-family: "Noto Sans";
+}
+
+.submitButton {
+  grid-row: 1 / span 1;
   background-color: #ecab3c;
   padding: 10px 20px;
   border-radius: 40px;
   border: none;
-
+  font-family: "Noto Sans";
   font-size: 32px;
   color: white;
   padding-left: 20px;
@@ -143,6 +157,7 @@ ol li {
 
 .button1 {
   position: absolute;
+  font-family: "Noto Sans";
   background-color: aliceblue;
   border-radius: 30px;
   width: 25px;
@@ -152,6 +167,7 @@ ol li {
 }
 .button2 {
   position: absolute;
+  font-family: "Noto Sans";
   background-color: aliceblue;
   border-radius: 30px;
   width: 25px;
@@ -161,6 +177,7 @@ ol li {
 }
 .button3 {
   position: absolute;
+  font-family: "Noto Sans";
   background-color: aliceblue;
   border-radius: 30px;
   width: 25px;
@@ -170,6 +187,7 @@ ol li {
 }
 .button4 {
   position: absolute;
+  font-family: "Noto Sans";
   background-color: aliceblue;
   border-radius: 30px;
   width: 25px;
@@ -179,6 +197,7 @@ ol li {
 }
 .button5 {
   position: absolute;
+  font-family: "Noto Sans";
   background-color: aliceblue;
   border-radius: 30px;
   width: 25px;
