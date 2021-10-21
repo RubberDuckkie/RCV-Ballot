@@ -145,6 +145,8 @@ ol li {
   position: absolute;
   background-color: aliceblue;
   border-radius: 30px;
+  width: 25px;
+  height: 25px;
   left: 165px;
   top: 225px;
 }
@@ -152,6 +154,8 @@ ol li {
   position: absolute;
   background-color: aliceblue;
   border-radius: 30px;
+  width: 25px;
+  height: 25px;
   left: 165px;
   top: 280px;
 }
@@ -159,6 +163,8 @@ ol li {
   position: absolute;
   background-color: aliceblue;
   border-radius: 30px;
+  width: 25px;
+  height: 25px;
   left: 165px;
   top: 335px;
 }
@@ -166,6 +172,8 @@ ol li {
   position: absolute;
   background-color: aliceblue;
   border-radius: 30px;
+  width: 25px;
+  height: 25px;
   left: 165px;
   top: 393px;
 }
@@ -173,6 +181,8 @@ ol li {
   position: absolute;
   background-color: aliceblue;
   border-radius: 30px;
+  width: 25px;
+  height: 25px;
   left: 165px;
   top: 450px;
 }
