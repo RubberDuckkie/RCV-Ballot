@@ -39,6 +39,16 @@ p {
   text-align: center;
   font-size: 50px;
 }
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+ol li {
+  position: relative;
+  padding: 8px;
+}
+
 .stateText {
   text-align: center;
   font-size: 24px;

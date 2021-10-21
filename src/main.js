@@ -166,8 +166,8 @@ function finalList() {
         let li = document.createElement('li');
         li.innerText = item;
         finalists.appendChild(li); 
-    })
-}//end final list
+    });
+}
 
 function finalConfirmation(){
     window.location.href="./outcome.html";
