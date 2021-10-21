@@ -17,7 +17,7 @@ function candidateSelection(candidate) {
         orderedCandidate.length = Math.min(orderedCandidate.length, 5);
     }*/
     addNameToBallot();
-
+    
 }
 
 function addNameToBallot() {
@@ -46,9 +46,16 @@ function ballotSubmission() {
 
     if (confirm(`Are you sure you want to submit your ballot?`)) {
         //confirm
-        console.log("Confirmed");
-        console.log(finalCandidates);
-        window.location.href = "./confirmation.html";
+        //console.log("Confirmed");
+        
+        if(finalCandidates.length !=0)
+        {
+            //console.log(finalCandidates);
+            window.location.href = "./confirmation.html";
+        }else
+        {
+            window.alert("You need to select at least 1 candidate.");
+        }
         return;
     } else {
         //cancel

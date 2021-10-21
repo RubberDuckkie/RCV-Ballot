@@ -141,6 +141,14 @@ ol li {
   grid-row: 2 / span 2;
 }
 
+.x-buttons {
+  position: absolute;
+  width: 26px;
+  height: 50px;
+  left: 170px;
+  top: 220px;
+}
+
 .candidateButtonsRight {
   width: 500px;
   grid-column: 3 / span 1;
