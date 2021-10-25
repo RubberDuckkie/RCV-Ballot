@@ -20,17 +20,18 @@
 
 
         <div class="slots">
-            <button type="button" class="editButton" id="choice1">Choice 1
+            <button type="button" class="editButton" id="choice1">Choice 1 <img src="/images/EditButton.png" style="height: 20px; width: 20px;">
                 <button type="button" class="button1" id="choice1" onclick="deleteButton('choice1')">X</button></button>
+                
             <!-- "Choice 1" needs to be value of selected button from array -->
-            <button type="button" class="editButton" id="choice2">Choice 2
+            <button type="button" class="editButton" id="choice2">Choice 2 <img src="/images/EditButton.png" style="height: 20px; width: 20px;">
                 <button type="button" class="button2" id="choice2" onclick="deleteButton('choice2')">X</button></button>
-            <button type="button" class="editButton" id="choice3">Choice 3
+            <button type="button" class="editButton" id="choice3">Choice 3 <img src="/images/EditButton.png" style="height: 20px; width: 20px;">
                 <button type="button" class="button3" id="choice3" onclick="deleteButton('choice3')">X</button></button>
-            <button type="button" class="editButton" id="choice4">Choice 4
+            <button type="button" class="editButton" id="choice4">Choice 4 <img src="/images/EditButton.png" style="height: 20px; width: 20px;">
                 <button type="button" class="button4" id="choice4" onclick="deleteButton('choice4')">X</button>
             </button>
-            <button type="button" class="editButton" id="choice5">Choice 5
+            <button type="button" class="editButton" id="choice5">Choice 5 <img src="/images/EditButton.png" style="height: 20px; width: 20px;">
                 <button type="button" class="button5" id="choice5" onclick="deleteButton('choice5')">X</button>
             </button>
             <button type="button" class="clear-button" id="clear" onclick="clearBallot()">Clear Ballot</button>
@@ -43,7 +44,7 @@
             <h1>Candidates</h1>
             <p id="stateText" class="stateText" style="color:#ECAB3C; text-align: left;">Choose your <b><u>First
                         Choice</u></b></p>
-        </div>
+        </div><img src="/images/RCV_Logo.png" style="width: 200px; height: 120px; align-self: flex-end; grid-column: 3 / span 2; grid-row: 1 / span 1;">
         <div class="candidateButtonsLeft">
             <button type="button" class="buttonsL" id="candidate1" onclick="candidateSelection('Eric L. Adams')">Eric L.
                 Adams</button> <!-- "Candidates 1" needs to be value from array -->
@@ -78,7 +79,8 @@
                 onclick="candidateSelection('Write-In Candidate'), keyboard('images/KeyboardandPopup.png',1500,1000,'keyboard')">Write-In
                 Candidate</button>
         </div>
-
+        <img src="/images/LanguageButton.png" style="float: right;">
+        <img src="/images/LanguageButtonEnglish.png" style="float: right; ">
 
 
     </div>
